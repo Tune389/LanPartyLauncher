@@ -1,0 +1,17 @@
+D:\LanParty\Copy\LanPartyLauncher\bin\Release\LanPartyLauncher.exe.config
+D:\LanParty\Copy\LanPartyLauncher\bin\Release\LanPartyLauncher.exe
+D:\LanParty\Copy\LanPartyLauncher\bin\Release\LanPartyLauncher.pdb
+D:\LanParty\Copy\LanPartyLauncher\obj\Release\LanPartyLauncher.csprojResolveAssemblyReference.cache
+D:\LanParty\Copy\LanPartyLauncher\obj\Release\MainWindow.baml
+D:\LanParty\Copy\LanPartyLauncher\obj\Release\MainWindow.g.cs
+D:\LanParty\Copy\LanPartyLauncher\obj\Release\App.g.cs
+D:\LanParty\Copy\LanPartyLauncher\obj\Release\LanPartyLauncher_MarkupCompile.cache
+D:\LanParty\Copy\LanPartyLauncher\obj\Release\LanPartyLauncher.g.resources
+D:\LanParty\Copy\LanPartyLauncher\obj\Release\LanPartyLauncher.Properties.Resources.resources
+D:\LanParty\Copy\LanPartyLauncher\obj\Release\LanPartyLauncher.csproj.GenerateResource.Cache
+D:\LanParty\Copy\LanPartyLauncher\obj\Release\LanPartyLauncher.exe
+D:\LanParty\Copy\LanPartyLauncher\obj\Release\LanPartyLauncher.pdb
+D:\LanParty\Copy\LanPartyLauncher\bin\Release\LanPartyLauncher.exe.manifest
+D:\LanParty\Copy\LanPartyLauncher\bin\Release\LanPartyLauncher.application
+D:\LanParty\Copy\LanPartyLauncher\obj\Release\LanPartyLauncher.exe.manifest
+D:\LanParty\Copy\LanPartyLauncher\obj\Release\LanPartyLauncher.application
