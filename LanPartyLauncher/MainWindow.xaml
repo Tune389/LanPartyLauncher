@@ -32,7 +32,6 @@
         <Label Name="bt_game_cod_waw" HorizontalAlignment="Left"  Grid.Column="6" Height="64" Width="64" MouseEnter="Auswahl_MouseEnter" MouseLeave="Auswahl_MouseLeave" MouseLeftButtonDown="Start_Bat" Loaded="LanPartyLauncher_Loaded" />
         <Label Name="bt_game_csgo" HorizontalAlignment="Left"  Grid.Column="7" Height="64" Width="64" MouseEnter="Auswahl_MouseEnter" MouseLeave="Auswahl_MouseLeave" MouseLeftButtonDown="Start_Bat" Loaded="LanPartyLauncher_Loaded" />
         <Label Name="bt_game_tmuf" HorizontalAlignment="Left"  Grid.Column="8" Height="64" Width="64" MouseEnter="Auswahl_MouseEnter" MouseLeave="Auswahl_MouseLeave" MouseLeftButtonDown="Start_Bat" Loaded="LanPartyLauncher_Loaded" />
-        <Label Name="bt_game_grid" HorizontalAlignment="Left"  Grid.Column="9" Height="64" Width="64" MouseEnter="Auswahl_MouseEnter" MouseLeave="Auswahl_MouseLeave" MouseLeftButtonDown="Start_Bat" Loaded="LanPartyLauncher_Loaded" />
         <Grid Grid.ColumnSpan="8" HorizontalAlignment="Left" Height="20"  Width="500" Margin="28,-97,0,155" Grid.Column="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>

@@ -53,14 +53,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LanPartyLauncher.exe" size="1118208">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LanPartyLauncher.exe" size="1116160">
       <assemblyIdentity name="LanPartyLauncher" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>dZCLyV1iqg1hQTmoIAvZTcu9azU=</dsig:DigestValue>
+        <dsig:DigestValue>WCIGvwQHmdj7/ITNqGE+E7ybSE4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -82,13 +82,13 @@
       <dsig:DigestValue>QcLmXLQOGE+O5XSXYJlAQ8PGdwI=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LanPartyLauncher.pdb" size="38400">
+  <file name="LanPartyLauncher.pdb" size="46592">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>RRQB5HsH5IeiFgF93UXC3WplGbM=</dsig:DigestValue>
+      <dsig:DigestValue>IGtznLjaGmWyGlX7Ezadh1v3CEU=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

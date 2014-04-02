@@ -16,29 +16,14 @@ using System.Windows.Media.Imaging;
 
 namespace LanPartyLauncher
 {
-    /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         private String nickname = null;
         private String host_ip = null;
-       // private System.Threading.Thread BoradcastListner
-       // { get; set; }
-
-
-       ResourceManager rm = null;
 
         public MainWindow()
         {
             InitializeComponent();      
-           /* BoradcastListner = new System.Threading.Thread(delegate()
-            {
-                CheckBroadcast.RefMethods = this;
-                var tempStart = new CheckBroadcast();
-                tempStart.StartListen();
-            });
-            BoradcastListner.Start();*/
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -57,19 +42,6 @@ namespace LanPartyLauncher
             if (this.Width != 1320) this.Width = 1320;
             if (this.Height != 700) this.Height = 700;
         }
-
-       /* private UdpClient Listener = new UdpClient(1234);
-        private void Listening()
-        {
-           this.Listener.BeginReceive(Receive, new object());
-        }
-        private void Receive(IAsyncResult packet)
-        {
-            IPEndPoint ip = new IPEndPoint(IPAddress.Any, 10001);
-            byte[] bytes = Listener.EndReceive(packet, ref ip);
-            string message = Encoding.ASCII.GetString(bytes);
-            //////this.Listening();
-        }*/
 
         private void Auswahl_MouseEnter(object sender, MouseEventArgs e)
         {
@@ -96,20 +68,6 @@ namespace LanPartyLauncher
         {
             myLabel.Background = new ImageBrush(new BitmapImage(new Uri(System.IO.Directory.GetCurrentDirectory() + "\\Images\\" + imageFileName, UriKind.Relative)));
         }
-
-      /*  private void bt_cod_mw_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            if (Window1.myWindow1 == null)
-                Window1.myWindow1 = new Window1("cod_mw");
-
-            Window1.myWindow1.Show();
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            if (Window1.myWindow1 != null)
-                Window1.myWindow1.Close();
-        }*/
 
         private void Start_Bat(object sender, MouseButtonEventArgs e)
         {
@@ -146,7 +104,7 @@ namespace LanPartyLauncher
                 myFi.Delete();
                 myFi = new FileInfo("data\\start_ts3.bat");
                 myFi.Delete();
-                myFi = new FileInfo("data\\games\\csgo\\rev.ini");
+                myFi = new FileInfo("data\\games\\cod_bo\\bgset.ini");
                 myFi.Delete();
             }
             catch { }
@@ -166,62 +124,14 @@ namespace LanPartyLauncher
                 mySw.WriteLine("exit");
                 mySw.Close();
 
-                mySw = new StreamWriter("data\\games\\csgo\\rev.ini");
-                mySw.WriteLine("");
-                mySw.WriteLine("[steamclient]");
-                mySw.WriteLine("");
-                mySw.WriteLine("PlayerName="+nickname);
-                mySw.WriteLine("Logging=false");
-                mySw.WriteLine("ClanTag=[LanParty]");
-                mySw.WriteLine("Use_avatar = true");
-                mySw.WriteLine("");
-                mySw.WriteLine("[Loader]");
-                mySw.WriteLine("");
-                mySw.WriteLine("ProcName=csgo.exe -steam -silent -novid -connect "+ host_ip);
-                mySw.WriteLine("");
-                mySw.WriteLine("[Emulator]");
-                mySw.WriteLine("");
-                mySw.WriteLine("CacheEnabled = false");
-                mySw.WriteLine("");
-                mySw.WriteLine("CachePath = D:\\Steam\\SteamApps");
-                mySw.WriteLine("");
-                mySw.WriteLine("Language = English");
-                mySw.WriteLine("");
-                mySw.WriteLine("Logging=false");
-                mySw.WriteLine("");
-                mySw.WriteLine("SteamDll=.\\Steam\\Steam.dll");
-                mySw.WriteLine("");
-                mySw.WriteLine("SteamClient = True");
-                mySw.WriteLine("");
-                mySw.WriteLine("SteamUser = SteamPlayer");
-                mySw.WriteLine("");
-                mySw.WriteLine("[Log]");
-                mySw.WriteLine("");
-                mySw.WriteLine("FileSystem=False");
-                mySw.WriteLine("Account=False");
-                mySw.WriteLine("UserID=False");
-                mySw.WriteLine("");
-                mySw.WriteLine("[GameServer]");
-                mySw.WriteLine("");
-                mySw.WriteLine("AllowOldRev74=False");
-                mySw.WriteLine("");
-                mySw.WriteLine("AllowOldRev=False");
-                mySw.WriteLine("");
-                mySw.WriteLine("AllowUnknown=False");
-                mySw.WriteLine("");
-                mySw.WriteLine("Fake_player= false");
-                mySw.WriteLine("");
-                mySw.WriteLine("RevEmu_2012 = false");
-                mySw.WriteLine("");
-                mySw.WriteLine("AddCountPlayerInServerName = false");
-                mySw.WriteLine("");
-                mySw.WriteLine("");
-                mySw.WriteLine("[GameServerNSNet]");
-                mySw.WriteLine("");
-                
+                mySw = new StreamWriter("data\\games\\cod_bo\\bgset.ini");
+                mySw.WriteLine("[Config]");
+                mySw.WriteLine("Host=" + host_ip);
+                mySw.WriteLine("Nickname=" + nickname);
                 mySw.Close();
+
             }
-            catch { }
+            catch { }         
 
             MessageBox.Show("Die IP: " + host_ip + " und der Nickname: " + nickname + " wurden erfolgreich eingetragen!");
         }
