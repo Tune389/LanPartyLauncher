@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -13,6 +14,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+
 
 namespace LanPartyLauncher
 {
@@ -56,7 +58,6 @@ namespace LanPartyLauncher
 
         public void ImageAnimation(Label Button, bool on)
         {
-           // Listening();
             String imageFileName = Button.Name;
             if (on) imageFileName += "_on";
             imageFileName += ".png";
@@ -89,51 +90,55 @@ namespace LanPartyLauncher
                 }
             }
             else MessageBox.Show("Gebe zuerst einen Nicknamen und eine Host-IP ein!");
-      
-            
         }
 
         private void bt_setData_Click(object sender, RoutedEventArgs e)
         {
+
             host_ip = tb_ip.Text;
             nickname = tb_nick.Text;
 
-            try
-            {
-                FileInfo myFi = new FileInfo("data\\games\\cod_mw2\\alterIWnet.ini");
-                myFi.Delete();
-                myFi = new FileInfo("data\\start_ts3.bat");
-                myFi.Delete();
-                myFi = new FileInfo("data\\games\\cod_bo\\bgset.ini");
-                myFi.Delete();
+            String[] myFiles = new String[3];
+            myFiles[0] = "data\\games\\cod_mw2\\alterIWnet.ini";
+            myFiles[1] = "data\\start_ts3.bat";
+            myFiles[2] = "data\\games\\cod_bo\\bgset.ini";
+
+            String[] myFilesContent = new String[3];
+            myFilesContent[0] =  "[Configuration]{0}";
+            myFilesContent[0] += "Server=" + host_ip + "{0}";
+            myFilesContent[0] += "WebHost=auto" + "{0}";
+            myFilesContent[0] += "Nickname=" + nickname + "{0}";
+
+            myFilesContent[1] =  "cd data/files/ts3/{0}";
+            myFilesContent[1] += "@start ts3client_win32.exe ts3server://"+host_ip+"?nickname="+nickname+"{0}";
+            myFilesContent[1] += "exit";
+
+            myFilesContent[2] =  "[Config]{0}";
+            myFilesContent[2] += "Host=" + host_ip + "{0}";
+            myFilesContent[2] += "[Config]{0}";
+            myFilesContent[2] += "Nickname=" + nickname + "{0}";
+
+            int count = 0;
+            foreach(String sFile in myFiles) {
+                if (File.Exists(sFile))
+                {
+                    FileInfo myFi = new FileInfo(sFile);
+                    myFi.Delete();
+                    StreamWriter mySw = new StreamWriter(sFile);
+                    mySw.WriteLine(myFilesContent[count], Environment.NewLine);
+                    mySw.Close();
+                }
+                count++;
             }
-            catch { }
-            try
+            if (count > 0)
             {
-                // Datei anlegen
-                StreamWriter mySw = new StreamWriter("data\\games\\cod_mw2\\alterIWnet.ini");
-                mySw.WriteLine("[Configuration]");
-                mySw.WriteLine("Server=" + host_ip);
-                mySw.WriteLine("WebHost=auto");
-                mySw.WriteLine("Nickname=" + nickname);
-                mySw.Close();
-
-                mySw = new StreamWriter("data\\start_ts3.bat");
-                mySw.WriteLine("cd data/files/ts3/");
-                mySw.WriteLine("@start ts3client_win32.exe ts3server://"+host_ip+"?nickname="+nickname);
-                mySw.WriteLine("exit");
-                mySw.Close();
-
-                mySw = new StreamWriter("data\\games\\cod_bo\\bgset.ini");
-                mySw.WriteLine("[Config]");
-                mySw.WriteLine("Host=" + host_ip);
-                mySw.WriteLine("Nickname=" + nickname);
-                mySw.Close();
-
+                MessageBox.Show("Die IP: " + host_ip + " und der Nickname: " + nickname + " wurden erfolgreich in " + count + " Files eingetragen!");
             }
-            catch { }         
+            else
+            {
+                MessageBox.Show("Keine Files Gefunden in denen die einstellungen geändert werden könnten");
+            }
 
-            MessageBox.Show("Die IP: " + host_ip + " und der Nickname: " + nickname + " wurden erfolgreich eingetragen!");
         }
 
         private void bt_app_close_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -159,10 +164,13 @@ namespace LanPartyLauncher
             imageFileName += ".png";
             setBackgroundImage(imageFileName, myLabel);
         }
- 
+
+
         private void LanPartyLauncher_Loaded_1(object sender, RoutedEventArgs e)
         {
-   
+
+            Installation myInstallation = new Installation();
+            myInstallation.ShowDialog();
             this.Background = new ImageBrush(new BitmapImage(new Uri("images\\frame.png", UriKind.Relative)));
 
         }
@@ -191,9 +199,5 @@ namespace LanPartyLauncher
             catch
             { }
         }
-
-
-
-
     }
 }

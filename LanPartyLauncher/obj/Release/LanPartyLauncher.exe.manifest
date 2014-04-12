@@ -39,28 +39,18 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="System.Core" version="3.5.0.0" publicKeyToken="b77a5c561934e089" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="WindowsBase" version="3.0.0.0" publicKeyToken="31bf3856ad364e35" language="neutral" processorArchitecture="msil" />
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LanPartyLauncher.exe" size="1116160">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LanPartyLauncher.exe" size="1115136">
       <assemblyIdentity name="LanPartyLauncher" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>IuTua2+OoW46UPRkpDKoUR7AFms=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>9K0ZA+O4+7ZQKiW0c/UXGUjajl7PDcHSRY+24+KyJKo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -69,26 +59,26 @@
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>VAg3aTTDrhVdSfqwtu5AmRdY5OQ=</dsig:DigestValue>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oOjNOtRwRbWd2nXuKd2pZwYJBms8vmRRpmHcYItscYU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LanPartyLauncher.exe.config" size="1024">
+  <file name="LanPartyLauncher.exe.config" size="1051">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>QcLmXLQOGE+O5XSXYJlAQ8PGdwI=</dsig:DigestValue>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RfNeJH3LKT9sqs34z9k0N1uetK6prL0yhXqBiz7w+5k=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="LanPartyLauncher.pdb" size="38400">
+  <file name="LanPartyLauncher.pdb" size="48640">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>0la2FNz2QgIMmu6+61EqMaepdws=</dsig:DigestValue>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WZAUSOOF/giENIMy1lGIAUHIVjHTDK6nQtADGjeVXeo=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

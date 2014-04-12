@@ -45,3 +45,4 @@ C:\Users\sasch_000\ownCloud\WebProjekte\LanPartyLauncher\LanPartyLauncher\obj\De
 C:\Users\sasch_000\ownCloud\WebProjekte\LanPartyLauncher\LanPartyLauncher\obj\Debug\LanPartyLauncher.csproj.GenerateResource.Cache
 C:\Users\sasch_000\ownCloud\WebProjekte\LanPartyLauncher\LanPartyLauncher\obj\Debug\LanPartyLauncher.exe.manifest
 C:\Users\sasch_000\ownCloud\WebProjekte\LanPartyLauncher\LanPartyLauncher\obj\Debug\LanPartyLauncher.application
+C:\Users\sasch_000\ownCloud\WebProjekte\LanPartyLauncher\LanPartyLauncher\obj\Debug\LanPartyLauncher.Installation.resources
